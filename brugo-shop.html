@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Brugo - Cerrada</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(180deg, #2d2d2d 0%, #1a1a1a 50%, #0d0d0d 100%);
+      min-height: 100vh;
+      color: #e8e8e8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      text-align: center;
+    }
+    .sign {
+      background: linear-gradient(135deg, #4a3728, #2d1f15);
+      border: 8px solid #5c4033;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5), inset 0 2px 10px rgba(255,255,255,0.1);
+      position: relative;
+    }
+    .sign::before {
+      content: "";
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 30px;
+      background: #5c4033;
+      border-radius: 10px 10px 0 0;
+    }
+    .sign::after {
+      content: "";
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 8px;
+      height: 40px;
+      background: #3d2817;
+    }
+    .orc-face {
+      margin-bottom: 20px;
+      animation: sad-bounce 3s ease-in-out infinite;
+    }
+    @keyframes sad-bounce {
+      0%, 100% { transform: translateY(0) rotate(-2deg); }
+      50% { transform: translateY(10px) rotate(2deg); }
+    }
+    h1 {
+      font-size: 2em;
+      color: #c0392b;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .message {
+      font-size: 1.2em;
+      color: #d4a574;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .sub-message {
+      font-size: 0.95em;
+      color: #a89080;
+      font-style: italic;
+      line-height: 1.7;
+      padding: 15px;
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      border-left: 3px solid #d4a574;
+    }
+    .signature {
+      margin-top: 15px;
+      color: #d4a574;
+      font-weight: bold;
+      font-size: 1em;
+    }
+    .tools {
+      margin-top: 30px;
+      font-size: 2.5em;
+      opacity: 0.6;
+    }
+    .barricade {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 30px;
+    }
+    .tape {
+      background: repeating-linear-gradient(
+        45deg,
+        #f1c40f,
+        #f1c40f 10px,
+        #2d2d2d 10px,
+        #2d2d2d 20px
+      );
+      height: 20px;
+      width: 100%;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sign">
+      <div class="orc-face">
+        <svg viewBox="0 0 200 200" width="150" height="150">
+          <!-- Cara verde del orco -->
+          <ellipse cx="100" cy="110" rx="70" ry="80" fill="#4a7c4a"/>
+          <ellipse cx="100" cy="110" rx="65" ry="75" fill="#5a8f5a"/>
+          
+          <!-- Orejas puntiagudas -->
+          <ellipse cx="25" cy="90" rx="20" ry="35" fill="#4a7c4a" transform="rotate(-20 25 90)"/>
+          <ellipse cx="175" cy="90" rx="20" ry="35" fill="#4a7c4a" transform="rotate(20 175 90)"/>
+          
+          <!-- Cejas gruesas y tristes (inclinadas hacia arriba en el centro) -->
+          <path d="M45 70 Q70 55 90 75" stroke="#2d4a2d" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <path d="M155 70 Q130 55 110 75" stroke="#2d4a2d" stroke-width="8" fill="none" stroke-linecap="round"/>
+          
+          <!-- Ojos tristes -->
+          <ellipse cx="70" cy="95" rx="18" ry="20" fill="#fffef0"/>
+          <ellipse cx="130" cy="95" rx="18" ry="20" fill="#fffef0"/>
+          <circle cx="70" cy="100" r="10" fill="#3d2314"/>
+          <circle cx="130" cy="100" r="10" fill="#3d2314"/>
+          <circle cx="73" cy="97" r="3" fill="#fff"/>
+          <circle cx="133" cy="97" r="3" fill="#fff"/>
+          
+          <!-- Párpados caídos (tristeza) -->
+          <path d="M52 85 Q70 75 88 85" fill="#4a7c4a"/>
+          <path d="M112 85 Q130 75 148 85" fill="#4a7c4a"/>
+          
+          <!-- Nariz de orco -->
+          <ellipse cx="100" cy="125" rx="15" ry="12" fill="#3d6b3d"/>
+          <circle cx="92" cy="128" r="5" fill="#2d4a2d"/>
+          <circle cx="108" cy="128" r="5" fill="#2d4a2d"/>
+          
+          <!-- Boca triste -->
+          <path d="M65 160 Q100 140 135 160" stroke="#2d4a2d" stroke-width="6" fill="none" stroke-linecap="round"/>
+          
+          <!-- Colmillos -->
+          <path d="M75 155 L70 172 L80 158" fill="#fffef0"/>
+          <path d="M125 155 L130 172 L120 158" fill="#fffef0"/>
+          
+          <!-- Lágrimas -->
+          <ellipse cx="55" cy="115" rx="5" ry="8" fill="#5dade2" opacity="0.8">
+            <animate attributeName="cy" values="115;140;115" dur="2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.8;0;0.8" dur="2s" repeatCount="indefinite"/>
+          </ellipse>
+          <ellipse cx="145" cy="115" rx="5" ry="8" fill="#5dade2" opacity="0.8">
+            <animate attributeName="cy" values="115;140;115" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.8;0;0.8" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+          </ellipse>
+        </svg>
+      </div>
+      <h1>📚 ESTABLECIMIENTO EN RECESO 📚</h1>
+      <p class="message">
+        El distinguido establecimiento de <strong>Brugo</strong> se encuentra temporalmente suspendido debido a labores de restauración estructural.
+      </p>
+      <p class="sub-message">
+        "Lamento profundamente las molestias ocasionadas, estimados clientes. Las circunstancias actuales requieren una intervención arquitectónica que, aunque inconveniente, resultará en un espacio comercial significativamente mejorado. Les ruego acepten mis más sinceras disculpas y les aseguro que mi regreso será inminente."
+      </p>
+      <p class="signature">
+        — Brugo, Comerciante y Erudito
+      </p>
+      <div class="tools">🔨 🪚 🔧</div>
+      <div class="barricade">
+        <div class="tape"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
